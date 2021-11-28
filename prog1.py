@@ -13,11 +13,10 @@ sentence = input("\n\33[1m\33[3mKindly enter the sentence you wanted: \33[0m")
 countW = len(sentence.split())
 countV = 0
 countC = 0
-space = 0
+
 def countCharacterType(sentence):
     countV = 0
     countC = 0
-    space = 0
     for c in range(0, len(sentence)):
          
         vc = sentence[c]
