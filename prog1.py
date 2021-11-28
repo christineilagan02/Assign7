@@ -8,29 +8,33 @@
 # vowels: 6
 # consonants: 8
 
-#text = 'pete'
-#count = 0
-#for c in text:
-#    if c == 'e':
-#        count = count+1
-#print(count)
 
-sentence = input("Kindly enter the sentence you wanted: ")
-
+sentence = input("\n\33[1m\33[3mKindly enter the sentence you wanted: \33[0m")
+countW = len(sentence.split())
+countV = 0
+countC = 0
+space = 0
 def countCharacterType(sentence):
-    countW = 0
     countV = 0
     countC = 0
+    space = 0
     for c in range(0, len(sentence)):
+         
         vc = sentence[c]
-        If ( (vc >= 'a' and vc <= 'z') or (v >= 'A' and v <= 'Z') ):
-            v = v.lower()
-            if (v == 'a' or v == 'e' or v == 'i' or v == 'o' or v == 'u'):
+ 
+        if ( (vc >= 'a' and vc <= 'z') or
+             (vc >= 'A' and vc <= 'Z') ):
+ 
+            vc = vc.lower()
+ 
+            if (vc == 'a' or vc == 'e' or vc == 'i'
+                        or vc == 'o' or vc == 'u'):
                 countV += 1
             else:
                 countC += 1
 
-print(countV)
-print(countC)
+    print(f"\n\33[1m\33[33mWords: \33[0m{countW}")
+    print(f"\33[35m\33[1mVowels: \33[0m{countV}")
+    print("\33[1m\33[37mConsonants: \33[0m" + str(countC) + "\n")
 
 countCharacterType(sentence)
