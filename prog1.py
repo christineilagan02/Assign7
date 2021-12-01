@@ -8,7 +8,7 @@
 # vowels: 6
 # consonants: 8
 
-
+print("\n\t\33[1m\33[33m*\33[0m---+---+---+---\33[1m\33[33m*\33[0m---+---+---+---\33[1m\33[33m*\33[0m")
 sentence = input("\n\33[1m\33[3mKindly enter the sentence you wanted: \33[0m")
 countW = len(sentence.split())
 countV = 0
@@ -32,8 +32,11 @@ def countCharacterType(sentence):
             else:
                 countC += 1
 
-    print(f"\n\33[1m\33[33mWords: \33[0m{countW}")
-    print(f"\33[35m\33[1mVowels: \33[0m{countV}")
-    print("\33[1m\33[37mConsonants: \33[0m" + str(countC) + "\n")
+
+    print(f"\n\t\33[1m\33[33mWords      :  \33[0m{countW}")
+    print(f"\t\33[35m\33[1mVowels     :  \33[0m{countV}")
+    print("\t\33[1m\33[37m\bConsonants  :  \33[0m" + str(countC) + "\n")
+    print("\t\33[1m\33[33m*\33[0m---+---+---+---\33[1m\33[33m*\33[0m---+---+---+---\33[1m\33[33m*\33[0m\n")
+
 
 countCharacterType(sentence)
